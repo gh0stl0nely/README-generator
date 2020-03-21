@@ -30,8 +30,13 @@ This application assumes the user is familiar with typing and exiting VIM
 For visual understanding, refer to Video Demonstration below
 
 ## Video Demonstration
+* Install Dependency with "npm install"
+![Installing node modules](gifs/installNPM.gif)
+
+* Activating the application with "node index.js"
 ![Activating The App](gifs/activateApp.gif)
 
+* Opening the generated with file "open {github username first entered}.pdf"
 ![Opening README file](gifs/openPDF.gif)
 
 ## Built With
