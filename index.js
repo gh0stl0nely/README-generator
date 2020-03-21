@@ -56,7 +56,7 @@ const generateREADME = async () => {
         const response = await axios.get(
             `https://api.github.com/users/${userName}`
         );
-        // console.log(response.data.email)
+
         const batchURL = await constructBadge();
 
         const data = processData(userInput, userName, response, batchURL);
@@ -120,9 +120,6 @@ const fromTemplateToHTML = (options) => {
 
 const processData = (userInput, userName, response, batchURL) => {
     const imageURL = response.data.avatar_url;
-    const email = !response.data.email ?
-        "Not available" :
-        response.data.email;
     const repoTitle = userInput.repoTitle;
     const htmlURL = response.data.html_url;
 
@@ -135,7 +132,6 @@ const processData = (userInput, userName, response, batchURL) => {
 
     let options = {
         userName,
-        email,
         imageURL,
         htmlURL,
         batchURL,
