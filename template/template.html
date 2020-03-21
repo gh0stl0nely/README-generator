@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .profileImage {
+            border-radius: 50%;
+            z-index: 9999;
+            margin-top: -100px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .rectangle {
+            width: 1000px;
+            height: 250px;
+            background-color: rgba(189, 224, 226, 0.74);
+            margin: 0 auto;
+
+        }
+        .wrapper{
+           border-style:solid;
+           border-radius: 10px;
+           width: 90%;
+           margin: 0 auto;
+           margin-top: 20px;
+           padding-left: 20px;
+           padding-right: 20px;
+        }
+        .block{
+            border-style: solid;
+            border-radius: 10px;
+            border-color:rgb(147, 218, 228);
+            margin: 0 auto;
+            margin-top: 10px;
+            height: 20px;
+            width: 50%;
+            padding: 5px;
+            padding-left: 20px;
+        }
+        .badge{
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="profile-header" style="text-align: center;">
+        <div class="rectangle"></div>
+        <img class="profileImage" src="https://github.com/gh0stl0nely.png">
+    </div>
+    <div class="block" id="userName">Github username: </div>
+    <div class="block" style="width: 35%; text-align: none;" id="userEmail">Email: </div>
+    <div class="block" id="projectTitle">Repository title: </div>
+    <!-- <div class="block" id="badges"></div> -->
+    <div style="text-align: center; margin-top: 10px;">
+            <img class="badge" src="https://img.shields.io/badge/asd-asdasd-brightgreen">
+            <img class="badge" src="https://img.shields.io/badge/asd-asdasd-brightgreen">
+            <img class="badge" src="https://img.shields.io/badge/asd-asdasd-brightgreen">
+        </div>
+    
+    <section class="wrapper" id="readme-content">
+        <h2>Table of Content</h2>
+        <hr>
+        <ol id="tableOfContent">
+            <li></li>
+        </ol>
+
+        <div id="projectDescription">
+            <h2>Project Description</h2>
+            <p></p>
+        </div>
+        <hr>
+    
+        <div id="installation">
+            <h2>Installation</h2>
+            <p></p>
+        </div>
+        <hr>
+        <div id="usage">
+            <h2>Usage</h2>
+            <p></p>
+        </div>
+        <hr>
+        <div id="license">
+            <h2>License</h2>
+            <p></p>
+        </div>
+        <hr>
+        <div id="contributing">
+            <h2>Contributing</h2>
+            <textarea>asdasdasdad</tex>
+        </div>
+    </section>
+
+</body>
+
+</html>
+

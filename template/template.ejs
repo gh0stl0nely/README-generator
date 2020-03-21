@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .profileImage {
+            border-radius: 50%;
+            z-index: 9999;
+            margin-top: -100px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .rectangle {
+            width: 1000px;
+            height: 250px;
+            background-color: rgb(189, 224, 226);
+            margin: 0 auto;
+
+        }
+
+        .wrapper {
+            border-style: solid;
+            border-radius: 10px;
+            width: 90%;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .block {
+            border-style: solid;
+            border-radius: 10px;
+            border-color: rgb(147, 218, 228);
+            margin: 0 auto;
+            margin-top: 10px;
+            height: 20px;
+            width: 50%;
+            padding: 5px;
+            padding-left: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="profile-header" style="text-align: center;">
+        <div class="rectangle"></div>
+        <a href="<%= htmlURL %>"><img class="profileImage" src="<%= imageURL %>"></a>
+    </section>
+
+    <section id="main-info">
+        <div class="block" id="userName">Github Username: <strong><%= userName %></strong></div>
+        <div class="block" style="width: 35%; text-align: none;" id="userEmail">Email: <strong><%= email %></strong></div>
+        <div class="block" id="projectTitle">Repository Title: <strong><%= repoTitle %></strong></div>
+    </section>
+
+    <section id="badges" style="text-align: center; margin-top: 10px;">
+        <img class="badge" src="<%= batchURL %>">
+    </section>
+
+    <section id="readme-content" class="wrapper">
+        <h2>Table of Content</h2>
+        <hr>
+        <ol id="tableOfContent">
+            <% for( let index = 0; index < tableOfContent.length; index++ ) { %>
+            <li><%= tableOfContent[index] %> </li>
+            <% } %>
+        </ol>
+
+        <div id="projectDescription">
+            <h2>Project Description</h2>
+            <div>
+                <% for( let i = 0; i < description.length; i++ ) { %>
+                <% if (description[i] !== '') { %>
+                <p><%= description[i] %></p>
+                <%  } %>
+                <% } %>
+            </div>
+        </div>
+        <hr>
+
+        <div id="installation">
+            <h2>Installation</h2>
+            <div>
+                <% for( let i = 0; i < installation.length; i++ ) { %>
+                <% if (installation[i] !== '') { %>
+                <p><%= installation[i] %></p>
+                <%  } %>
+                <% } %>
+            </div>
+        </div>
+        <hr>
+        <div id="usage">
+            <h2>Usage</h2>
+            <div>
+                <% for( let i = 0; i < usage.length; i++ ) { %>
+                <% if (usage[i] !== '') { %>
+                <p><%= usage[i] %></p>
+                <%  } %>
+                <% } %>
+            </div>
+        </div>
+        <hr>
+        <div id="license">
+            <h2>License </h2>
+            <div>
+                <% for( let i = 0; i < license.length; i++ ) { %>
+                <% if (license[i] !== '') { %>
+                <p><%= license[i] %></p>
+                <%  } %>
+                <% } %>
+            </div>
+        </div>
+        <hr>
+        <div id="contributing">
+            <h2>Contributing</h2>
+            <div>
+                <% for( let i = 0; i < contributing.length; i++ ) { %>
+                <% if (contributing[i] !== '') { %>
+                <p><%= contributing[i] %></p>
+                <%  } %>
+                <% } %>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
